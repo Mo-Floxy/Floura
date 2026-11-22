@@ -1,0 +1,22 @@
+{
+  "name": "floura",
+  "private": true,
+  "version": "1.0.0",
+  "description": "FLOURA — a premium women's health and cycle tracking application",
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c magenta,cyan \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --watch server/src/index.js",
+    "dev:client": "vite --config client/vite.config.ts",
+    "build": "npm run build --workspace client",
+    "start": "NODE_ENV=production node server/src/index.js",
+    "test": "node server/test/run.mjs"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "playwright": "^1.49.1"
+  }
+}
