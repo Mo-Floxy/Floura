@@ -15,6 +15,9 @@
     "server",
     "client"
   ],
+  "engines": {
+    "node": "22.x"
+  },
   "devDependencies": {
     "concurrently": "^9.1.0",
     "playwright": "^1.49.1"
